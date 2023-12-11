@@ -2,7 +2,6 @@
 
 Entity *createEntity(const char *name, size_t nameSize) {
     Entity *newEntity = (Entity*) malloc(sizeof(Entity));
-
     if(newEntity == NULL) {
         return NULL;
     }

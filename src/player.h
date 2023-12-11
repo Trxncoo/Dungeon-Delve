@@ -9,7 +9,7 @@ typedef struct {
     int level;
 } Player;
 
-Player *createPlayer(const char *name, size_t nameSize);
+Player *createPlayer(const char *name, size_t nameSize);  // TODO: REMOVE NAME AND INITIALIZATION FROM CREATION TO MAKE IT MORE MODULAR
 int initializePlayer(Player *player, const char *name, size_t nameSize);
 
 #endif //PLAYER_H

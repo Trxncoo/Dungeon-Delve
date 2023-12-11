@@ -2,7 +2,6 @@
 
 Player *createPlayer(const char *name, size_t nameSize) {
     Player *newPlayer = (Player*) malloc(sizeof(Player));
-
     if(newPlayer == NULL) {
         return NULL;
     }
