@@ -3,12 +3,10 @@
 #include "menu.h"
 
 int main() {
-    initscr();
-    refresh();
     Menu *menu = createMenu();
     initializeMenu(menu);
-    displayMenu(menu);
-    getch();
-    endwin();
+    for (int i = 0; i < MENU_HEIGHT; ++i) {
+        printf("%s\n", menu->chars[i]);
+    }
     return 0;
 }

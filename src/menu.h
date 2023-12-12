@@ -2,9 +2,14 @@
 #define MENU_H
 
 #include <stdlib.h>
-#include "interface.h"
+#include <string.h>
+#include <stdio.h>
+//#include "interface.h"
 
-#define MAX_TITLE_SIZE 14
+typedef enum {
+    MENU_HEIGHT = 30,
+    MENU_WIDTH = 120
+} MapDimensions;
 
 typedef enum {
     START_GAME,
@@ -16,12 +21,11 @@ typedef enum {
 
 typedef struct {
     MenuOption selectedOption;
-    WINDOW *window;
+    char chars[MENU_HEIGHT][MENU_WIDTH + 1];
 } Menu;
 
 Menu *createMenu();
 void initializeMenu(Menu *menu);
-void displayMenu(Menu *menu);
-
+int readMenuFromFile(Menu *menu, const char *filename);
 
 #endif //MENU_H
