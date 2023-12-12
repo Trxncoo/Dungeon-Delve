@@ -1,14 +1,8 @@
 #include "entity.h"
 
-Entity *createEntity(const char *name, size_t nameSize) {
+Entity *createEntity() {
     Entity *newEntity = (Entity*) malloc(sizeof(Entity));
     if(newEntity == NULL) {
-        return NULL;
-    }
-
-    int initResult = initializeEntity(newEntity, name, nameSize);
-    if(initResult == 0) {
-        free(newEntity);
         return NULL;
     }
 

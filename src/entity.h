@@ -15,7 +15,7 @@ typedef struct {
     Pool mana;
 } Entity;
 
-Entity *createEntity(const char *name, size_t nameSize); // TODO: REMOVE NAME AND INITIALIZATION FROM CREATION TO MAKE IT MORE MODULAR
+Entity *createEntity();
 int initializeEntity(Entity *entity, const char *name, size_t nameSize);
 
 #endif //ENTITY_H

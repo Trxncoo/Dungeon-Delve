@@ -1,14 +1,8 @@
 #include "player.h"
 
-Player *createPlayer(const char *name, size_t nameSize) {
+Player *createPlayer() {
     Player *newPlayer = (Player*) malloc(sizeof(Player));
     if(newPlayer == NULL) {
-        return NULL;
-    }
-
-    int initResult = initializePlayer(newPlayer, name, nameSize);
-    if(initResult == 0) {
-        free(newPlayer);
         return NULL;
     }
 
